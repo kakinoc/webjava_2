@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>RPG</title>
+</head>
+<body>
+	<form action="/start" method="POST">
+		<input type="submit" value="スタート！" />
+	</form>
+	<dl>
+		<dt>
+			<tr th:each="text : ${messageList}">
+				<td th:text="${text}"></td><br>
+			</tr>
+			【体力】<br>
+			戦士：<td th:text="${warriorHp}"/>、盗賊：<td th:text="${robberHp}"/>、ボス：<td th:text="${bossHp}"/>、モブ：<td th:text="${mobHp}"/>
+		</dt>
+	</dl>
+</body>
+</html>
